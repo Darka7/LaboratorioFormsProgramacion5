@@ -21,8 +21,9 @@ namespace WinFormLaboratorio
         {
 
             GridViewMarcaVehiculo.DataSource = IApp.PruebaService.Get()
-                .Select(r=>new { r.MarcaVehiculoId,r.Descripcion })
-                .ToList();
+                .Select(r=>new { r.MarcaVehiculoId,r.Descripcion ,r.Estado})
+                .ToList()
+                ;
                
         }
     }

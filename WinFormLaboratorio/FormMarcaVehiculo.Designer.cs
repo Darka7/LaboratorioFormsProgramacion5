@@ -36,11 +36,11 @@ namespace WinFormLaboratorio
             // GridViewMarcaVehiculo
             // 
             this.GridViewMarcaVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridViewMarcaVehiculo.Location = new System.Drawing.Point(35, 26);
+            this.GridViewMarcaVehiculo.Location = new System.Drawing.Point(13, 32);
             this.GridViewMarcaVehiculo.Name = "GridViewMarcaVehiculo";
             this.GridViewMarcaVehiculo.RowHeadersWidth = 51;
             this.GridViewMarcaVehiculo.RowTemplate.Height = 29;
-            this.GridViewMarcaVehiculo.Size = new System.Drawing.Size(753, 412);
+            this.GridViewMarcaVehiculo.Size = new System.Drawing.Size(784, 412);
             this.GridViewMarcaVehiculo.TabIndex = 0;
             // 
             // FormMarcaVehiculo

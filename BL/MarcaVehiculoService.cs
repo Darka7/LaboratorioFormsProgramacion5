@@ -24,7 +24,7 @@ namespace BL
 
         public MarcaVehiculoService()
         {
-            this.sql = new DataAccess();
+            sql = new DataAccess();
         }
 
 
