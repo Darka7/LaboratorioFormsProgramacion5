@@ -10,7 +10,7 @@ namespace WinFormLaboratorio
    public struct IApp
     {
 
-        public static IPruebaService PruebaService => new PruebaService();
+        public static IMarcaVehiculoService PruebaService => new MarcaVehiculoService();
 
 
 
