@@ -20,7 +20,7 @@ namespace WinFormLaboratorio
         private void FormMarcaVehiculo_Load(object sender, EventArgs e)
         {
 
-            GridViewMarcaVehiculo.DataSource = IApp.PruebaService.Get()
+            GridViewMarcaVehiculo.DataSource = IApp.MarcaVehiculoService.Get()
                 .Select(r=>new { r.MarcaVehiculoId,r.Descripcion ,r.Estado})
                 .ToList()
                 ;
