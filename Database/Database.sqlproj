@@ -58,10 +58,18 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
-    <Folder Include="dbo\StoreProcedure" />
+    <Folder Include="dbo\Store Procedures" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\Persona.sql" />
-    <Build Include="dbo\Tables\Contacto.sql" />
+    <Build Include="dbo\Store Procedures\MarcaVehiculoActualizar.sql" />
+    <Build Include="dbo\Store Procedures\MarcaVehiculoEliminar.sql" />
+    <Build Include="dbo\Store Procedures\MarcaVehiculoInsertar.sql" />
+    <Build Include="dbo\Store Procedures\MarcaVehiculoObtener.sql" />
+    <Build Include="dbo\Store Procedures\VehiculoActualizar.sql" />
+    <Build Include="dbo\Store Procedures\VehiculoEliminar.sql" />
+    <Build Include="dbo\Store Procedures\VehiculoInsertar.sql" />
+    <Build Include="dbo\Store Procedures\VehiculoObtener.sql" />
+    <Build Include="dbo\Tables\MarcaVehiculo.sql" />
+    <Build Include="dbo\Tables\Vehiculo.sql" />
   </ItemGroup>
 </Project>
