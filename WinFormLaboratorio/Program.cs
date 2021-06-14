@@ -18,7 +18,7 @@ namespace WinFormLaboratorio
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMarcaVehiculo());
+            Application.Run(new FormMenuPrincipal());
         }
     }
 }
