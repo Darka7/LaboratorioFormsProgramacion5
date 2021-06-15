@@ -73,7 +73,7 @@ namespace BD
 
 
 
-        public IEnumerable<A> Query<A, B>(string sp, object Param = null, int? Timeout = null)
+        public IEnumerable<A> Query<A, B>(string sp, string split, object Param = null, int? Timeout = null)
         {
             try
             {
@@ -83,7 +83,7 @@ namespace BD
                     exec.Open();
 
                     var result = exec.Query<A, B>(sql: sp, param: Param, commandType: System.Data.CommandType.StoredProcedure
-                        , commandTimeout: Timeout);
+                        , commandTimeout: Timeout, splitOn: split);
 
                     return result;
 
@@ -97,7 +97,7 @@ namespace BD
         }
 
 
-        public IEnumerable<A> Query<A, B, C>(string sp, object Param = null, int? Timeout = null)
+        public IEnumerable<A> Query<A, B, C>(string sp, string split, object Param = null, int? Timeout = null)
         {
             try
             {
@@ -107,7 +107,7 @@ namespace BD
                     exec.Open();
 
                     var result = exec.Query<A, B, C>(sql: sp, param: Param, commandType: System.Data.CommandType.StoredProcedure
-                        , commandTimeout: Timeout);
+                        , commandTimeout: Timeout, splitOn: split);
 
                     return result;
 
@@ -120,7 +120,7 @@ namespace BD
             }
         }
 
-        public IEnumerable<A> Query<A, B, C, D>(string sp, object Param = null, int? Timeout = null)
+        public IEnumerable<A> Query<A, B, C, D>(string sp, string split, object Param = null, int? Timeout = null)
         {
             try
             {
@@ -130,7 +130,7 @@ namespace BD
                     exec.Open();
 
                     var result = exec.Query<A, B, C, D>(sql: sp, param: Param, commandType: System.Data.CommandType.StoredProcedure
-                        , commandTimeout: Timeout);
+                        , commandTimeout: Timeout, splitOn: split);
 
                     return result;
 
@@ -144,7 +144,7 @@ namespace BD
         }
 
 
-        public IEnumerable<A> Query<A, B, C, D, E>(string sp, object Param = null, int? Timeout = null)
+        public IEnumerable<A> Query<A, B, C, D, E>(string sp, string split, object Param = null, int? Timeout = null)
         {
             try
             {
@@ -154,7 +154,7 @@ namespace BD
                     exec.Open();
 
                     var result = exec.Query<A, B, C, D, E>(sql: sp, param: Param, commandType: System.Data.CommandType.StoredProcedure
-                        , commandTimeout: Timeout);
+                        , commandTimeout: Timeout, splitOn: split);
 
                     return result;
 
@@ -168,7 +168,7 @@ namespace BD
         }
 
 
-        public IEnumerable<A> Query<A, B, C, D, E, H>(string sp, object Param = null, int? Timeout = null)
+        public IEnumerable<A> Query<A, B, C, D, E, H>(string sp, string split, object Param = null, int? Timeout = null)
         {
             try
             {
@@ -178,7 +178,7 @@ namespace BD
                     exec.Open();
 
                     var result = exec.Query<A, B, C, D, E, H>(sql: sp, param: Param, commandType: System.Data.CommandType.StoredProcedure
-                        , commandTimeout: Timeout);
+                        , commandTimeout: Timeout, splitOn: split);
 
                     return result;
 
@@ -192,7 +192,7 @@ namespace BD
         }
 
 
-        public IEnumerable<A> Query<A, B, C, D, E, H, I>(string sp, object Param = null, int? Timeout = null)
+        public IEnumerable<A> Query<A, B, C, D, E, H, I>(string sp, string split, object Param = null, int? Timeout = null)
         {
             try
             {
@@ -202,7 +202,7 @@ namespace BD
                     exec.Open();
 
                     var result = exec.Query<A, B, C, D, E, H, I>(sql: sp, param: Param, commandType: System.Data.CommandType.StoredProcedure
-                        , commandTimeout: Timeout);
+                        , commandTimeout: Timeout, splitOn: split);
 
                     return result;
 
