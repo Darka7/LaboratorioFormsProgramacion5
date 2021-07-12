@@ -30,17 +30,29 @@ namespace WinFormLaboratorio.Forms
         private void InitializeComponent()
         {
             this.panelForm = new System.Windows.Forms.Panel();
+            this.dpFechaModelo = new System.Windows.Forms.DateTimePicker();
+            this.txtDefectos = new System.Windows.Forms.RichTextBox();
+            this.lbDefectos = new System.Windows.Forms.Label();
+            this.chkTieneDefectos = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtMatricula = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboMarcaVehiculo = new System.Windows.Forms.ComboBox();
             this.BtnGuardar = new FontAwesome.Sharp.IconButton();
             this.chkEstado = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMarcaVehiculoId = new System.Windows.Forms.TextBox();
+            this.txtVehiculoId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnEliminar = new FontAwesome.Sharp.IconButton();
             this.BtnActualizar = new FontAwesome.Sharp.IconButton();
             this.BtnNuevo = new FontAwesome.Sharp.IconButton();
-            this.GridViewMarcaVehiculo = new System.Windows.Forms.DataGridView();
+            this.GridViewVehiculo = new System.Windows.Forms.DataGridView();
             this.VehiculoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarcaVehiculoDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,23 +62,145 @@ namespace WinFormLaboratorio.Forms
             this.Estado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Defectos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridViewMarcaVehiculo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewVehiculo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelForm
             // 
+            this.panelForm.Controls.Add(this.dpFechaModelo);
+            this.panelForm.Controls.Add(this.txtDefectos);
+            this.panelForm.Controls.Add(this.lbDefectos);
+            this.panelForm.Controls.Add(this.chkTieneDefectos);
+            this.panelForm.Controls.Add(this.label8);
+            this.panelForm.Controls.Add(this.label7);
+            this.panelForm.Controls.Add(this.txtModelo);
+            this.panelForm.Controls.Add(this.label6);
+            this.panelForm.Controls.Add(this.txtColor);
+            this.panelForm.Controls.Add(this.label5);
+            this.panelForm.Controls.Add(this.txtMatricula);
+            this.panelForm.Controls.Add(this.label4);
+            this.panelForm.Controls.Add(this.cboMarcaVehiculo);
             this.panelForm.Controls.Add(this.BtnGuardar);
             this.panelForm.Controls.Add(this.chkEstado);
             this.panelForm.Controls.Add(this.label3);
-            this.panelForm.Controls.Add(this.txtDescripcion);
             this.panelForm.Controls.Add(this.label2);
-            this.panelForm.Controls.Add(this.txtMarcaVehiculoId);
+            this.panelForm.Controls.Add(this.txtVehiculoId);
             this.panelForm.Controls.Add(this.label1);
             this.panelForm.Location = new System.Drawing.Point(1041, 0);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(598, 543);
+            this.panelForm.Size = new System.Drawing.Size(598, 617);
             this.panelForm.TabIndex = 9;
             this.panelForm.Visible = false;
+            // 
+            // dpFechaModelo
+            // 
+            this.dpFechaModelo.Location = new System.Drawing.Point(167, 320);
+            this.dpFechaModelo.Name = "dpFechaModelo";
+            this.dpFechaModelo.Size = new System.Drawing.Size(268, 27);
+            this.dpFechaModelo.TabIndex = 21;
+            // 
+            // txtDefectos
+            // 
+            this.txtDefectos.Location = new System.Drawing.Point(165, 416);
+            this.txtDefectos.Name = "txtDefectos";
+            this.txtDefectos.Size = new System.Drawing.Size(318, 62);
+            this.txtDefectos.TabIndex = 20;
+            this.txtDefectos.Text = "";
+            this.txtDefectos.Visible = false;
+            // 
+            // lbDefectos
+            // 
+            this.lbDefectos.AutoSize = true;
+            this.lbDefectos.Location = new System.Drawing.Point(42, 419);
+            this.lbDefectos.Name = "lbDefectos";
+            this.lbDefectos.Size = new System.Drawing.Size(71, 20);
+            this.lbDefectos.TabIndex = 18;
+            this.lbDefectos.Text = "Defectos:";
+            this.lbDefectos.Visible = false;
+            // 
+            // chkTieneDefectos
+            // 
+            this.chkTieneDefectos.AutoSize = true;
+            this.chkTieneDefectos.Location = new System.Drawing.Point(175, 371);
+            this.chkTieneDefectos.Name = "chkTieneDefectos";
+            this.chkTieneDefectos.Size = new System.Drawing.Size(18, 17);
+            this.chkTieneDefectos.TabIndex = 17;
+            this.chkTieneDefectos.UseVisualStyleBackColor = true;
+            this.chkTieneDefectos.CheckedChanged += new System.EventHandler(this.chkTieneDefectos_CheckedChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(27, 368);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 20);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Tiene Defectos?";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 320);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 20);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Fecha Modelo :";
+            // 
+            // txtModelo
+            // 
+            this.txtModelo.Location = new System.Drawing.Point(167, 269);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(268, 27);
+            this.txtModelo.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(25, 272);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Modelo :";
+            // 
+            // txtColor
+            // 
+            this.txtColor.Location = new System.Drawing.Point(167, 220);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(268, 27);
+            this.txtColor.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 223);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Color :";
+            // 
+            // txtMatricula
+            // 
+            this.txtMatricula.Location = new System.Drawing.Point(167, 172);
+            this.txtMatricula.Name = "txtMatricula";
+            this.txtMatricula.Size = new System.Drawing.Size(268, 27);
+            this.txtMatricula.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(25, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Matricula :";
+            // 
+            // cboMarcaVehiculo
+            // 
+            this.cboMarcaVehiculo.FormattingEnabled = true;
+            this.cboMarcaVehiculo.Location = new System.Drawing.Point(167, 116);
+            this.cboMarcaVehiculo.Name = "cboMarcaVehiculo";
+            this.cboMarcaVehiculo.Size = new System.Drawing.Size(269, 28);
+            this.cboMarcaVehiculo.TabIndex = 7;
             // 
             // BtnGuardar
             // 
@@ -78,20 +212,21 @@ namespace WinFormLaboratorio.Forms
             this.BtnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnGuardar.IconSize = 30;
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(252, 225);
+            this.BtnGuardar.Location = new System.Drawing.Point(250, 552);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(111, 38);
             this.BtnGuardar.TabIndex = 6;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // chkEstado
             // 
             this.chkEstado.AutoSize = true;
             this.chkEstado.Checked = true;
             this.chkEstado.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkEstado.Location = new System.Drawing.Point(158, 176);
+            this.chkEstado.Location = new System.Drawing.Point(175, 502);
             this.chkEstado.Name = "chkEstado";
             this.chkEstado.Size = new System.Drawing.Size(18, 17);
             this.chkEstado.TabIndex = 5;
@@ -100,35 +235,28 @@ namespace WinFormLaboratorio.Forms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 173);
+            this.label3.Location = new System.Drawing.Point(42, 499);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Estado :";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(158, 113);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(366, 27);
-            this.txtDescripcion.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 20);
+            this.label2.Size = new System.Drawing.Size(117, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Descripcion :";
+            this.label2.Text = "Marca Vehiculo :";
             // 
-            // txtMarcaVehiculoId
+            // txtVehiculoId
             // 
-            this.txtMarcaVehiculoId.Location = new System.Drawing.Point(296, 32);
-            this.txtMarcaVehiculoId.Name = "txtMarcaVehiculoId";
-            this.txtMarcaVehiculoId.Size = new System.Drawing.Size(125, 27);
-            this.txtMarcaVehiculoId.TabIndex = 1;
-            this.txtMarcaVehiculoId.Visible = false;
+            this.txtVehiculoId.Location = new System.Drawing.Point(296, 32);
+            this.txtVehiculoId.Name = "txtVehiculoId";
+            this.txtVehiculoId.Size = new System.Drawing.Size(125, 27);
+            this.txtVehiculoId.TabIndex = 1;
+            this.txtVehiculoId.Visible = false;
             // 
             // label1
             // 
@@ -158,6 +286,7 @@ namespace WinFormLaboratorio.Forms
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnActualizar
             // 
@@ -176,6 +305,7 @@ namespace WinFormLaboratorio.Forms
             this.BtnActualizar.Text = "Editar";
             this.BtnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // BtnNuevo
             // 
@@ -194,11 +324,12 @@ namespace WinFormLaboratorio.Forms
             this.BtnNuevo.Text = "Nuevo";
             this.BtnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnNuevo.UseVisualStyleBackColor = false;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
-            // GridViewMarcaVehiculo
+            // GridViewVehiculo
             // 
-            this.GridViewMarcaVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridViewMarcaVehiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GridViewVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridViewVehiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.VehiculoId,
             this.MarcaVehiculoDescripcion,
             this.Matricula,
@@ -207,13 +338,13 @@ namespace WinFormLaboratorio.Forms
             this.FechaModelo,
             this.Estado,
             this.Defectos});
-            this.GridViewMarcaVehiculo.Location = new System.Drawing.Point(-18, 0);
-            this.GridViewMarcaVehiculo.Name = "GridViewMarcaVehiculo";
-            this.GridViewMarcaVehiculo.ReadOnly = true;
-            this.GridViewMarcaVehiculo.RowHeadersWidth = 51;
-            this.GridViewMarcaVehiculo.RowTemplate.Height = 29;
-            this.GridViewMarcaVehiculo.Size = new System.Drawing.Size(1053, 550);
-            this.GridViewMarcaVehiculo.TabIndex = 5;
+            this.GridViewVehiculo.Location = new System.Drawing.Point(-18, 0);
+            this.GridViewVehiculo.Name = "GridViewVehiculo";
+            this.GridViewVehiculo.ReadOnly = true;
+            this.GridViewVehiculo.RowHeadersWidth = 51;
+            this.GridViewVehiculo.RowTemplate.Height = 29;
+            this.GridViewVehiculo.Size = new System.Drawing.Size(1053, 550);
+            this.GridViewVehiculo.TabIndex = 5;
             // 
             // VehiculoId
             // 
@@ -226,7 +357,7 @@ namespace WinFormLaboratorio.Forms
             // 
             // MarcaVehiculoDescripcion
             // 
-            this.MarcaVehiculoDescripcion.DataPropertyName = "MarcaVehiculo.Descripcion";
+            this.MarcaVehiculoDescripcion.DataPropertyName = "MarcaVehiculoDescripcionColum";
             this.MarcaVehiculoDescripcion.HeaderText = "Marca Vehiculo";
             this.MarcaVehiculoDescripcion.MinimumWidth = 6;
             this.MarcaVehiculoDescripcion.Name = "MarcaVehiculoDescripcion";
@@ -291,17 +422,18 @@ namespace WinFormLaboratorio.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1661, 746);
+            this.ClientSize = new System.Drawing.Size(1661, 665);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnActualizar);
             this.Controls.Add(this.BtnNuevo);
-            this.Controls.Add(this.GridViewMarcaVehiculo);
+            this.Controls.Add(this.GridViewVehiculo);
             this.Name = "FormVehiculo";
-            this.Text = "FormVehiculo";
+            this.Text = "Vehiculo";
+            this.Load += new System.EventHandler(this.FormVehiculo_Load);
             this.panelForm.ResumeLayout(false);
             this.panelForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridViewMarcaVehiculo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewVehiculo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -312,14 +444,26 @@ namespace WinFormLaboratorio.Forms
         private FontAwesome.Sharp.IconButton BtnGuardar;
         private System.Windows.Forms.CheckBox chkEstado;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMarcaVehiculoId;
+        private System.Windows.Forms.TextBox txtVehiculoId;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton BtnEliminar;
         private FontAwesome.Sharp.IconButton BtnActualizar;
         private FontAwesome.Sharp.IconButton BtnNuevo;
-        private System.Windows.Forms.DataGridView GridViewMarcaVehiculo;
+        private System.Windows.Forms.DataGridView GridViewVehiculo;
+        private System.Windows.Forms.TextBox txtMatricula;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboMarcaVehiculo;
+        private System.Windows.Forms.RichTextBox txtDefectos;
+        private System.Windows.Forms.Label lbDefectos;
+        private System.Windows.Forms.CheckBox chkTieneDefectos;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dpFechaModelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn VehiculoId;
         private System.Windows.Forms.DataGridViewTextBoxColumn MarcaVehiculoDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;

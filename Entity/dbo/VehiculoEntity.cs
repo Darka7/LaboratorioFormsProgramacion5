@@ -18,6 +18,9 @@ namespace Entity
         public int? VehiculoId { get; set; }
         public int? MarcaVehiculoId { get; set; }
         public virtual MarcaVehiculoEntity MarcaVehiculo { get; set; }
+
+        public string MarcaVehiculoDescripcionColum => MarcaVehiculo?.Descripcion; 
+
         public string Matricula { get; set; }
         public string Color { get; set; }
         public string Modelo { get; set; }

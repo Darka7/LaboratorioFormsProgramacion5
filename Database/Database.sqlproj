@@ -72,5 +72,7 @@
     <Build Include="dbo\Tables\MarcaVehiculo.sql" />
     <Build Include="dbo\Tables\Vehiculo.sql" />
     <Build Include="dbo\Store Procedures\MarcaVehiculoLista.sql" />
+    <Build Include="dbo\Tables\Usuarios.sql" />
+    <Build Include="dbo\Store Procedures\Login.sql" />
   </ItemGroup>
 </Project>

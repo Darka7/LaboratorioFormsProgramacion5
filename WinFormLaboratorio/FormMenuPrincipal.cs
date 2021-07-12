@@ -49,5 +49,31 @@ namespace WinFormLaboratorio
             AbrirFormPrincipal( new FormMarcaVehiculo());
             
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            AbrirFormPrincipal(new FormVehiculo());
+        }
+
+        private void FormMenuPrincipal_Load(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Session.Usuario?.Usuario))
+            {
+                var form = new FormLogin();
+
+                form.Show();
+
+                this.Dispose();
+            }
+
+            LbUsuario.Text = Session.Usuario?.Usuario;
+
+
+        }
+
+        private void FormMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
