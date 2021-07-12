@@ -12,6 +12,7 @@ namespace WinFormLaboratorio
 
         public static IMarcaVehiculoService MarcaVehiculoService => new MarcaVehiculoService();
 
+        public static IVehiculoService VehiculoService => new VehiculoService();
 
 
     }
