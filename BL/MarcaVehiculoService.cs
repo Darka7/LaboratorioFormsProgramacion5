@@ -15,6 +15,8 @@ namespace BL
         IEnumerable<MarcaVehiculoEntity> Get();
         MarcaVehiculoEntity GetById(MarcaVehiculoEntity entity);
         DBEntity Update(MarcaVehiculoEntity entity);
+
+        IEnumerable<MarcaVehiculoEntity> GetLista();
     }
 
     public class MarcaVehiculoService : IMarcaVehiculoService
@@ -127,7 +129,20 @@ namespace BL
 
 
 
+        public IEnumerable<MarcaVehiculoEntity> GetLista()
+        {
+            try
+            {
+                var result = sql.Query<MarcaVehiculoEntity>("MarcaVehiculoLista");
 
+                return  result;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
 
 

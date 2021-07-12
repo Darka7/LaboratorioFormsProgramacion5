@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Entity
 {
-    public partial class VehiculoEntity:EN
+    public partial class VehiculoEntity : EN
     {
 
         public VehiculoEntity()
@@ -21,8 +21,10 @@ namespace Entity
         public string Matricula { get; set; }
         public string Color { get; set; }
         public string Modelo { get; set; }
-        public DateTime FechaModelo { get; set; }
+        public DateTime FechaModelo { get; set; } = DateTime.Now;
+        public bool TieneDefectos { get; set; }
+        public string Defectos { get; set; }
 
-       
+
     }
 }
