@@ -12,6 +12,7 @@ namespace BL
     public interface IUsuariosServices
     {
         UsuariosEntity Login(UsuariosEntity entity);
+        DBEntity Registrar(UsuariosEntity entity);
     }
 
     public class UsuariosServices : IUsuariosServices
@@ -38,6 +39,30 @@ namespace BL
                 return result;
             }
             catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+
+
+        public DBEntity Registrar(UsuariosEntity entity)
+        {
+
+            try
+            {
+                var result = sql.Execute("UsuarioRegistrar", new
+                {
+                    entity.Usuario,
+                    entity.Nombre,
+                    entity.Contrasena
+                });
+
+                return result;
+
+            }
+            catch (Exception)
             {
 
                 throw;

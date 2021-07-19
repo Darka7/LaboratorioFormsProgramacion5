@@ -35,6 +35,7 @@ namespace WinFormLaboratorio
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // iconButton1
@@ -93,18 +94,30 @@ namespace WinFormLaboratorio
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 40;
-            this.iconButton2.Location = new System.Drawing.Point(254, 187);
+            this.iconButton2.Location = new System.Drawing.Point(247, 183);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(75, 44);
             this.iconButton2.TabIndex = 5;
             this.iconButton2.UseVisualStyleBackColor = false;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(327, 233);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(82, 20);
+            this.linkLabel1.TabIndex = 6;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Registrarse";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 262);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
@@ -127,5 +140,6 @@ namespace WinFormLaboratorio
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -69,5 +69,12 @@ namespace WinFormLaboratorio
 
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var form = new FormRegistrarUsuario();
+
+            form.Show();
+        }
     }
 }
